@@ -1,0 +1,26 @@
+<!-- PackYou wardrobe cotrol -->
+    <div class="control flt-left">
+      <!-- Wardrobe control -->
+      <div id="wardrobeControl">
+          <!-- @if (Model != null && Model.Cupboard != null)
+          {
+              foreach (var group in Model.Cupboard.Keys)
+              { -->
+        <div class="section-header"><span>@group.Name</span><span class='group-selector'>Select Group </span></div>
+        <div class="section-container" data-groupId='@group.Id' data-group='@group.Name'>
+           <!--  @foreach (var item in Model.Cupboard[group])
+            { -->
+                <div class="section-item" data-selcted='false' data-name='@item.Name' data-item-Id='@item.Id' data-bag-id='0' data-group-id='@group.Id' data-group='@group.Name' data-item-quantity='1' data-expandable="@item.IsExpandable" data-is-custom-name='0'>
+                    <span>@item.Name</span>
+                    <span class="item-qty-unit">Qty: <input class="items-quantity" type="text" maxlength="4" value="1" /></span>
+                </div>
+                <div class="section-item-container">
+                <!-- Itterate according to qantity -->
+                    <div class="section-subitem">@item.Name</div>
+                </div>
+           <!--  } -->
+        </div>
+          <!--     }
+          } -->
+      </div>
+    </div>
